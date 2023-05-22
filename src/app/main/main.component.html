@@ -1,0 +1,23 @@
+
+  <section class="left">
+    <p>Latest posts</p>
+    <div class="commits">
+      <table>
+        <tr *ngFor="let log of logs; let odd=odd; let even=even; let i = index" [ngClass]="{odd: odd, even: even}">
+          <td><p style="font-size: 30px">{{log.person}} has:<br>{{log.content}}</p><br><p>On: {{log.date}}</p></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+
+  <section class="right">
+    <div class="buttons">
+      <button (click)="introduction()">Introduction</button>
+      <button (click)="about()">About the page</button>
+      <button (click)="background()">Some background</button>
+    </div>
+    <div class="content">
+      <p>{{currentContent}}</p>
+    </div>
+  </section>

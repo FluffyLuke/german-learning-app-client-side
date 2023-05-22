@@ -1,0 +1,23 @@
+<div class="create-p">
+  <p>Create a noun!</p>
+</div>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="send()">
+  <label for="verb">Verb</label>
+  <input  class="input" type="text" id="verb" name="verb" formControlName="verb" required>
+  <label for="imperfect">Imperfect</label>
+  <input class="input" id="imperfect" name="imperfect" required formControlName="imperfect">
+  <label for="perfect">Perfect</label>
+  <input class="input" id="perfect" name="perfect" type="text" required formControlName="perfect">
+  <label for="translation">Translation</label>
+  <input class="input" id="translation" name="translation" type="text" required formControlName="translation">
+  <label for="person">Sender</label>
+  <input class="input" name="person" id="person" type="text" required formControlName="person">
+
+  <button type="submit">SEND</button>
+</form>
+<div *ngIf="error != null" class="error-message">
+  <p style="font-size: 30px; font-weight: 800">Problem accoured: </p>
+  <p>{{error}}</p>
+</div>
+

@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Dekko';font-size: 22px;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+button{
+  cursor: pointer;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.outlet-content{
+  background-color: rgb(228, 233, 242);
+}
+
+.error-message{
+  font-weight: 800;
+  color: red;
+  font-size: 35px;
+}

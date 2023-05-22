@@ -1,0 +1,15 @@
+<div class="create-p">
+  <p>Delete a noun!</p>
+</div>
+
+<form  [formGroup]="reactiveForm" (ngSubmit)="delete()">
+  <label for="id">ID</label>
+  <input class="input" type="text" id="id" name="id" required [readonly]="nounId!= null && nounId != ''" formControlName="id">
+  <label for="person">Person</label>
+  <input class="input" type="text" id="person" name="person" required formControlName="person">
+  <button type="submit">DELETE</button>
+</form>
+<div *ngIf="error != null" class="error-message">
+  <p style="font-size: 30px; font-weight: 800">Problem accoured: </p>
+  <p>{{error}}</p>
+</div>

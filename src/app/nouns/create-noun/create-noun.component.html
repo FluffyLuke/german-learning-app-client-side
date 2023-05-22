@@ -1,0 +1,24 @@
+<div class="create-p">
+  <p>Create a noun!</p>
+</div>
+
+  <form #nounToSend="ngForm" (ngSubmit)="send(nounToSend.value)">
+    <label for="noun">Noun</label>
+    <input  class="input" type="text" id="noun" name="noun" ngModel required>
+    <label for="article">Article</label>
+    <select class="input" id="article" name="article" ngModel required >
+      <option value="der">Der</option>
+      <option value="die">Die</option>
+      <option value="das">Das</option>
+    </select>
+    <label for="translation">Translation</label>
+    <input class="input" id="translation" name="translation" type="text" ngModel required >
+    <label for="person">Sender</label>
+    <input class="input" name="person" id="person" type="text" ngModel required >
+
+    <button type="submit">SEND</button>
+  </form>
+<div *ngIf="error != null" class="error-message">
+  <p style="font-size: 30px; font-weight: 800">Problem accoured: </p>
+  <p>{{error}}</p>
+</div>

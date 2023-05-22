@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "germanapp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "germanapp-cs:build"
+            "browserTarget": "germanapp-cs:build",
           }
         },
         "test": {

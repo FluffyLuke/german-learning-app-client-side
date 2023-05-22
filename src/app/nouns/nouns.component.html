@@ -1,0 +1,11 @@
+<div class="main outlet-content">
+  <div class="select">
+    <button [routerLink]="'display'">Display</button>
+    <button [routerLink]="'create'">Create</button>
+    <button [routerLink]="'delete'">Delete</button>
+    <button [routerLink]="'alter'">Alter</button>
+  </div>
+  <div class="selected">
+    <router-outlet></router-outlet>
+  </div>
+</div>

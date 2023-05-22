@@ -1,0 +1,27 @@
+<div class="create-p">
+  <p>Alter a noun!</p>
+</div>
+
+<form  [formGroup]="reactiveForm" (ngSubmit)="alter()">
+  <label for="id">ID</label>
+  <input class="input" type="text" id="id" name="id" required [readonly]="noun.id != null && noun.id != ''" formControlName="id">
+  <label for="noun">Noun</label>
+  <input  class="input" type="text" id="noun" name="noun" required formControlName="noun">
+  <label for="article">Article</label>
+  <select class="input" id="article" name="article" formControlName="article" required >
+    <option value="der">Der</option>
+    <option value="die">Die</option>
+    <option value="das">Das</option>
+  </select>
+  <label for="translation">Translation</label>
+  <input class="input" id="translation" name="translation" type="text" required formControlName="translation" >
+  <label for="person">Sender</label>
+  <input class="input" name="person" id="person" type="text" required formControlName="person">
+
+  <button type="submit">SEND</button>
+</form>
+<div *ngIf="error != null" class="error-message">
+  <p style="font-size: 30px; font-weight: 800">Problem accoured: </p>
+  <p>{{error}}</p>
+</div>
+

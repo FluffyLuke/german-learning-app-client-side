@@ -1,0 +1,29 @@
+<div class="options">
+  <button (click)="getVerbs(numberOfNouns.value)">Get nouns</button>
+  <input placeholder="10" #numberOfNouns type="number">
+</div>
+<div class="error">
+  <p class="error-message">{{errorMessage}}</p>
+</div>
+<div class="content-table">
+  <table>
+    <thead>
+    <td>Verb</td>
+    <td>Imperfect</td>
+    <td>Perfect</td>
+    <td>Translation</td>
+    <td>Sender</td>
+    <td></td>
+    <td></td>
+    </thead>
+    <tr *ngFor="let verb of verbList; let odd=odd; let even=even; let i = index" [ngClass]="{odd: odd, even: even}">
+      <td><p>{{verb.verb}}</p></td>
+      <td><p>{{verb.imperfect}}</p></td>
+      <td><p>{{verb.perfect}}</p></td>
+      <td><p>{{verb.translation}}</p></td>
+      <td><p>{{verb.person}}</p></td>
+      <td><button (click)="alter(i)">ALTER</button></td>
+      <td><button (click)="delete(i)">DELETE</button></td>
+    </tr>
+  </table>
+</div>
